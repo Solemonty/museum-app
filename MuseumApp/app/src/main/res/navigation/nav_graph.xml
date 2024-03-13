@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="gr.novidea.museumapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_staffHomeFragment"
+            app:destination="@id/staffHomeFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_museumFragment"
+            app:destination="@id/museumFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_saleFragment"
+            app:destination="@id/saleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cinemaFragment"
+            app:destination="@id/cinemaFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_DJFragment"
+            app:destination="@id/DJFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/staffHomeFragment"
+        android:name="gr.novidea.museumapp.staff.StaffHomeFragment"
+        android:label="fragment_staff_home"
+        tools:layout="@layout/fragment_staff_home" >
+        <action
+            android:id="@+id/action_staffHomeFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_staffHomeFragment_to_managmentFragment"
+            app:destination="@id/managmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/museumFragment"
+        android:name="gr.novidea.museumapp.user.MuseumFragment"
+        android:label="fragment_museum"
+        tools:layout="@layout/fragment_museum" >
+        <action
+            android:id="@+id/action_museumFragment_to_detailedFragment"
+            app:destination="@id/detailedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saleFragment"
+        android:name="gr.novidea.museumapp.user.SaleFragment"
+        android:label="fragment_sale"
+        tools:layout="@layout/fragment_sale" />
+    <fragment
+        android:id="@+id/cinemaFragment"
+        android:name="gr.novidea.museumapp.user.CinemaFragment"
+        android:label="fragment_cinema"
+        tools:layout="@layout/fragment_cinema" />
+    <fragment
+        android:id="@+id/DJFragment"
+        android:name="gr.novidea.museumapp.user.DJFragment"
+        android:label="fragment_d_j"
+        tools:layout="@layout/fragment_d_j" />
+    <fragment
+        android:id="@+id/managmentFragment"
+        android:name="gr.novidea.museumapp.staff.ManagmentFragment"
+        android:label="fragment_managment"
+        tools:layout="@layout/fragment_managment" >
+        <action
+            android:id="@+id/action_managmentFragment_to_hallSettingsFragment"
+            app:destination="@id/hallSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedFragment"
+        android:name="gr.novidea.museumapp.user.DetailedFragment"
+        android:label="fragment_detailed"
+        tools:layout="@layout/fragment_detailed" >
+        <argument
+            android:name="artist"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/hallSettingsFragment"
+        android:name="gr.novidea.museumapp.staff.HallSettingsFragment"
+        android:label="fragment_hall_settings"
+        tools:layout="@layout/fragment_hall_settings" >
+        <argument
+            android:name="number"
+            app:argType="integer" />
+    </fragment>
+
+
+</navigation>

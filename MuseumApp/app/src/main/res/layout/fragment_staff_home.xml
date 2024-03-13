@@ -1,0 +1,168 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <gr.novidea.museumapp.staff.data.PinEntryEditText
+        android:id="@+id/pinEntryEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:fontFamily="@font/roboto_mono_medium"
+        android:clickable="false"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/wrong_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wrong Password"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/pinEntryEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinEntryEditText">
+
+        <Button
+            android:id="@+id/key_1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="1"
+            app:layout_constraintBottom_toBottomOf="@id/key_2"
+            app:layout_constraintEnd_toStartOf="@id/key_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/key_2" />
+
+        <Button
+            android:id="@+id/key_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            app:layout_constraintBottom_toTopOf="@id/key_5"
+            app:layout_constraintEnd_toStartOf="@id/key_3"
+            app:layout_constraintStart_toEndOf="@id/key_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/key_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="3"
+            app:layout_constraintBottom_toBottomOf="@id/key_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/key_2"
+            app:layout_constraintTop_toTopOf="@id/key_2" />
+
+        <Button
+            android:id="@+id/key_4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="4"
+            app:layout_constraintBottom_toBottomOf="@id/key_5"
+            app:layout_constraintEnd_toStartOf="@id/key_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/key_5" />
+
+        <Button
+            android:id="@+id/key_5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="5"
+            app:layout_constraintBottom_toTopOf="@id/key_8"
+            app:layout_constraintEnd_toStartOf="@id/key_6"
+            app:layout_constraintStart_toEndOf="@id/key_4"
+            app:layout_constraintTop_toBottomOf="@id/key_2" />
+
+        <Button
+            android:id="@+id/key_6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="6"
+            app:layout_constraintBottom_toBottomOf="@id/key_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/key_5"
+            app:layout_constraintTop_toTopOf="@id/key_5" />
+
+        <Button
+            android:id="@+id/key_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="7"
+            app:layout_constraintBottom_toBottomOf="@id/key_8"
+            app:layout_constraintEnd_toStartOf="@id/key_8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/key_8" />
+
+        <Button
+            android:id="@+id/key_8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="8"
+            app:layout_constraintBottom_toTopOf="@id/key_0"
+            app:layout_constraintEnd_toStartOf="@id/key_9"
+            app:layout_constraintStart_toEndOf="@id/key_7"
+            app:layout_constraintTop_toBottomOf="@id/key_5" />
+
+        <Button
+            android:id="@+id/key_9"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="9"
+            app:layout_constraintBottom_toBottomOf="@id/key_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/key_8"
+            app:layout_constraintTop_toTopOf="@id/key_8" />
+
+        <Button
+            android:id="@+id/key_backspace"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Delete"
+            app:layout_constraintBottom_toBottomOf="@id/key_0"
+            app:layout_constraintEnd_toStartOf="@id/key_0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/key_0" />
+
+        <Button
+            android:id="@+id/key_0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/key_9"
+            app:layout_constraintStart_toEndOf="@id/key_backspace"
+            app:layout_constraintTop_toBottomOf="@id/key_8" />
+
+        <Button
+            android:id="@+id/key_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            app:layout_constraintBottom_toBottomOf="@id/key_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/key_0"
+            app:layout_constraintTop_toTopOf="@id/key_0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
